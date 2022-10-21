@@ -1,3 +1,37 @@
+.imgHead {
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	contain: content;
+}
+
+.imgHead .floatText {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+}
+
+.imgHead .floatText .text1 {
+	text-align: left;
+	letter-spacing: 0px;
+	color: #ffffff;
+	opacity: 1;
+	height: 79px;
+}
+
+.imgHead .floatText .text2 {
+	text-align: left;
+	letter-spacing: 0px;
+	color: #ffffff;
+	opacity: 1;
+}
+.recipe {
+	contain: content;
+	width: 100%;
+	position: absolute;
+}
 .recipesTitle {
 	color: var(--unnamed-color-d84a4a);
 	text-align: left;
@@ -5,22 +39,192 @@
 	color: #d84a4a;
 	opacity: 1;
 }
+#carruselfin.carrusel {
+	overflow-x: auto;
+}
+.carrusel {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 5px;
+}
+.menuHeads {
+    background-color: transparent;
+    position        : absolute;
+}
+
+.menuHeads .tarjetMenu {
+    background    : transparent linear-gradient(180deg, #E9F1FA 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    box-shadow    : 0px 5px 9px #8395A766;
+    border-radius : 10px;
+    opacity       : 1;
+    align-items   : center;
+    text-align    : center;
+    flex-direction: column;
+    display       : flex;
+    margin-right  : 14px;
+    contain       : content;
+}
+
+.menuHeads .tarjetMenu .imgMenu {
+    margin-top: 13.83px;
+    width     : 31px;
+    height    : 33px;
+}
+
+.menuHeads .tarjetMenu span {
+    color         : var(--unnamed-color-425966);
+    text-align    : center;
+    font          : normal normal medium 13px/20px Poppins;
+    letter-spacing: 0px;
+    color         : #425966;
+    opacity       : 1;
+    bottom        : 8.74px;
+    position      : absolute;
+}
+
 @media (max-width: 428px) {
+	.imgHead {
+        height          : 234px;
+        background-image: url(../img/bcq.jpg);
+    }
+	.imgHead .floatText {
+		top: 50px;
+		left: 56.5px;
+	}
+	.imgHead .floatText .text1 {
+		font: normal normal normal 51px/77px Poppins;
+	}
+
+	.imgHead .floatText .text2 {
+		font: normal normal normal 51px/69px Monster Clubhouse;
+		margin-top: -30px;
+	}
+	.imgHead {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-x: center;
+	}
+	.recipe {
+		top: 500px;
+	}
 	.recipesTitle {
 		padding-left: 64px;
 		font: normal normal normal 54px/74px Monster Clubhouse;
 	}
+	#carruselini {
+		display: none;
+	}
+	#carruselfin {
+        display: flex;
+    }
+	.carrusel {
+		top: -25px;
+		position: relative;
+		justify-content: flex-start;
+	}
+	
+    .menuHeads {
+        display  : flex;
+        top      : 280px;
+        flex-wrap: wrap;
+        left     : 30.9px;
+    }
+	.menuHeads .tarjetMenu {
+        width        : 114px;
+        height       : 92px;
+        margin-bottom: 15px;
+    }
 }
 @media (min-width: 429px) and (max-width: 768px) {
+	.recipe {
+		top: 406px;
+	}
 	.recipesTitle {
 		padding-left: 70px;
 		font: normal normal normal 67px/91px Monster Clubhouse;
 	}
+	#carruselini {
+		display: none;
+	}
+	#carruselfin {
+        display: flex;
+    }
+	.carrusel {
+		justify-content: flex-start;
+	}
+	.imgHead {
+        height          : 249px;
+        background-image: url(../img/bcq.jpg);
+    }
+	.imgHead .floatText {
+		top: 50px;
+		left: 121.55px;
+	}
+	.imgHead .floatText .text1 {
+		font: normal normal normal 74px/111px Poppins;
+	}
+
+	.imgHead .floatText .text2 {
+		font: normal normal normal 67px/91px Monster Clubhouse;
+		margin-top: -10px;
+	}
+	.imgHead {
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.menuHeads {
+        display: flex;
+        top    : 288px;
+        left   : 20px;
+    }
+	.menuHeads .tarjetMenu {
+        width : 106px;
+        height: 85px;
+    }
 }
 
 @media (min-width: 769px) {
+	.recipe {
+		top: 513px;
+	}
 	.recipesTitle {
 		padding-left: 70px;
 		font: normal normal normal 67px/91px Monster Clubhouse;
 	}
+	#carruselini {
+		display: flex;
+	}
+	#carruselfin {
+        display: none;
+    }
+	.carrusel {
+		justify-content: center;
+	}
+	.imgHead {
+        height          : 416px;
+        background-image: url(../img/bcq.jpg);
+    }
+	.imgHead .floatText {
+		top: 134px;
+		left: 261px;
+	}
+	.imgHead .floatText .text1 {
+		font: normal normal normal 74px/111px Poppins;
+	}
+
+	.imgHead .floatText .text2 {
+		font: normal normal normal 67px/91px Monster Clubhouse;
+		margin-top: -10px;
+	}
+	.imgHead {
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.menuHeads {
+        display: none;
+    }
 }
