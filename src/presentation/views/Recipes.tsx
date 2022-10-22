@@ -1,17 +1,11 @@
-import React from "react";
 import "../assets/css/recipes.scss";
-import tarjets2 from '../../app/utils/menu'
+import tarjets2 from "../../app/utils/menu";
 import RecipeCard from "../components/RecipeCard";
 import MenuCard from "../components/MenuCard";
-const Recipes = () => {
-	const plato = {
-		idnormal: "abx",
-		idhover: "abx",
-		foodDesc: "descripcion",
-		food: "comida",
-		calification: "5.0"
-	};
+import { useAPI } from "../../app/context";
 
+const Recipes = () => {
+	const recipes: any = useAPI();
 
 	return (
 		<>
@@ -30,10 +24,22 @@ const Recipes = () => {
 				<div className="recipesTitle">Nuevas Recetas</div>
 				<div className="contCarrusel">
 					<ul id="carruselini" className="carrusel">
-						<RecipeCard element={plato} />
+						{recipes.recipes.map((recipe: any) => {
+							return (
+								<>
+									<RecipeCard element={recipe} />
+								</>
+							);
+						})}
 					</ul>
 					<ul id="carruselfin" className="carrusel">
-						<RecipeCard element={plato} />
+						{recipes.recipes.map((recipe: any) => {
+							return (
+								<>
+									<RecipeCard element={recipe} />
+								</>
+							);
+						})}
 					</ul>
 				</div>
 			</div>

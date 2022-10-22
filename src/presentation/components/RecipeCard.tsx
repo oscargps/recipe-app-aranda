@@ -24,17 +24,17 @@ const RecipeCard = (props: Recipe) => {
 			<li className="tarjet" onMouseOver={showHover} onMouseOut={out}>
 				<div
 					className="plate"
-					style={{ backgroundImage: `url(${cherry})` }}
+					style={{ backgroundImage: `url(${element.thumbnail_url})` }}
 				></div>
 				{showDescription ? (
-					<div id={element.idnormal} className="normalTarjet">
+					<div id={element.show_id} className="normalTarjet">
 						<div className="textFood">
-							<span className="food">{element.food}</span>
-							<span className="foodDesc">{element.foodDesc}</span>
+							<span className="food">{element.name}</span>
+							{/* <span className="foodDesc">{element.name}</span> */}
 						</div>
 						<div className="score">
 							<img className="star" src={ic_star} />
-							<span>{element.calification} </span>
+							<span>{element.user_ratings.score} </span>
 							<img className="heart" src={favorite} />
 						</div>
 					</div>
@@ -46,14 +46,14 @@ const RecipeCard = (props: Recipe) => {
 								<span className="titTextHover">
 									Tama&ntilde;o de la porci&oacute;n
 								</span>
-								<span className="textHover">4 raciones</span>
+								<span className="textHover">{element.num_servings} raciones</span>
 							</div>
 							<div className="descriptionHover">
 								<img className="imgHover" src={ic_time} />
 								<span className="titTextHover">
 									Tiempo de preparaci&oacute;n
 								</span>
-								<span className="textHover">10 minutos</span>
+								<span className="textHover">{element.total_time_minutes} minutos</span>
 							</div>
 							<div className="descriptionHover">
 								<img className="imgHover" src={ic_chef} />
